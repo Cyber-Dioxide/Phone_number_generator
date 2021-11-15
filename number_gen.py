@@ -17,7 +17,7 @@ init (autoreset = True)
 from random import choice
 init()
 
-os.system('cls')
+os.system('clear')
 
 y= """ 
 
