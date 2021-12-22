@@ -92,11 +92,11 @@ def program():
         randomcolors("\nHave a good ay :-)")
 
 def view():
-    file = open("Phone_Numbers" , "r")
-    print(ran + "\n\t\tThis is what i've found!\n")
-    read = file.read
+    file = open("Phone_Numbers.txt" , "r+")
+    print(ran , "\n\t\tThis is what i've found!\n")
+    read = file.readlines
 
-    print(all_col[2%6] + read)
+    print(f"{ran} {read}")
 
 
 cont =" "
