@@ -94,7 +94,7 @@ def program():
 def view():
     file = open("numbers.txt" , "r")
     print(ran , "\n\t\tThis is what i've found!\n")
-    read = file.read
+    read = file.read()
 
     print(f"{ran} {read}")
 
