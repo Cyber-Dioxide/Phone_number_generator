@@ -73,7 +73,7 @@ def program():
 
         j = random.choice(l)
 
-        save = open('phone_numbers.txt', 'a+')
+        save = open('numbers.txt', 'a+')
         for i in range(0, n):
             rez = code + area_code + number_generator()
             save.write(rez + '\n')
@@ -92,9 +92,9 @@ def program():
         randomcolors("\nHave a good ay :-)")
 
 def view():
-    file = open("Phone_Numbers.txt" , "r+")
+    file = open("numbers.txt" , "r")
     print(ran , "\n\t\tThis is what i've found!\n")
-    read = file.readlines
+    read = file.read
 
     print(f"{ran} {read}")
 
