@@ -1,7 +1,8 @@
 # Use With Python 3
 import colorama
+
 from fontstyle import apply
-from colorama.ansi import Style
+from colorama import Style , Fore
 from phonenumbers.phonenumberutil import region_code_for_country_code
 from pyfiglet import figlet_format
 import requests, re, sys, random, time, os
@@ -11,50 +12,33 @@ import random
 import os,pyfiglet
 from colorama import Fore
 import requests, re, sys, random, time, os, fontstyle
-from colorama import Fore, Back, init
 from threading import Thread
 
-init(autoreset=True)
 from random import choice
 
-init()
 
-black = '\033[30m'
-red = '\033[31m'
-green = '\033[32m'
-orange = '\033[33m'
-blue = '\033[34m'
-purple = '\033[35m'
-cyan = '\033[36m'
-lightgrey = '\033[37m'
-darkgrey = '\033[90m'
-lightred = '\033[91m'
-lightgreen = '\033[92m'
-yellow = '\033[93m'
-lightblue = '\033[94m'
-pink = '\033[95m'
-lightcyan = '\033[96m'
-all_col = [red, green, orange, cyan, lightred, lightgreen, yellow, lightcyan,lightblue,pink]
+
+all_col= [Style.BRIGHT+Fore.RED,Style.BRIGHT+Fore.CYAN,Style.BRIGHT+Fore.LIGHTCYAN_EX, Style.BRIGHT+Fore.LIGHTBLUE_EX, Style.BRIGHT+Fore.LIGHTCYAN_EX,Style.BRIGHT+Fore.LIGHTMAGENTA_EX,Style.BRIGHT+Fore.LIGHTYELLOW_EX]
+
 ran = random.choice(all_col)
 
 
 def banner():
         os.system("clear")
-        en = pyfiglet.figlet_format("Number\nGenerator\n")
-        print(ran, en)
-        print(ran + "\n\t\tV_2.5\t\n\n")
 
-        print(Fore.CYAN, "- " * 4, " [+] Follow me on Instagram @saadkhan041 ", "- " * 4)
-        print(Fore.LIGHTYELLOW_EX, "\n", "- " * 4, " [+] Follow me on Instagram @coding_memz ", "- " * 4)
-        print(Fore.LIGHTRED_EX, "\n", "- " * 4, "[+] Github: https://github.com/Saadkhan041/ ", "- " * 3)
+        print(ran, pyfiglet.figlet_format("\tNumber\nGenerator"))
+        print(ran + "\n\t\tV_5.0.5 'Final Realese'\t\n\n")
+        print("*" * 63)
 
+        print(Style.BRIGHT+Fore.LIGHTCYAN_EX, "\n" ,"- " * 4, " [+] Follow me on Instagram @saadkhan041 ", "- " * 4)
+        print(Style.BRIGHT+Fore.LIGHTYELLOW_EX, "\n", "- " * 4, " [+] Follow me on Instagram @coding_memz ", "- " * 4)
+        print(Style.BRIGHT+Fore.LIGHTRED_EX, "\n", "- " * 4, "[+] Github: https://github.com/Saadkhan041/ ", "- " * 3)
+        print("\n" , "*" * 63)
 
 banner()
 
-
 def exit():
     sys.exit()
-
 
 
 l = [Style.BRIGHT + Fore.RED, Style.BRIGHT + Fore.LIGHTBLUE_EX, Style.BRIGHT + Fore.LIGHTCYAN_EX,
@@ -95,10 +79,6 @@ def program():
             save.write(rez + '\n')
         print(f'{j}Phone Numbers Saved In phone_numbers.txt')
 
-
-
-
-
     except ValueError:
         print(f"{k}\nYou have missed something")
 
@@ -111,15 +91,28 @@ def program():
     except KeyboardInterrupt:
         randomcolors("\nHave a good ay :-)")
 
+def view():
+    file = open("Phone_Numbers" , "r")
+    print(ran + "\n\t\tThis is what i've found!\n")
+    read = file.read
+
+    print(all_col[2%6] + read)
+
+
 cont =" "
 while cont != "n" and "no":
-    print(Fore.LIGHTGREEN_EX + "\n\n\t\t[1] Generate Numbers\n\t\t[2] Exit\n ")
+    print(Fore.LIGHTGREEN_EX + "\n\n\t\t[1] Generate Numbers\t\t\n\t\t[2] View Generated Numbers\n\t\t[3] Exit\n ")
+
 
     choice = input(ran + "Enter your choice: ")
     if choice == "1":
         program()
 
     elif choice == "2":
+        view()
+
+
+    elif choice == "3":
         print(ran + "\n\tDont Forget to do following tasks :-)\t\n")
         print(Fore.CYAN, "- " * 4, " [+] Follow me on Instagram @saadkhan041 ", "- " * 4)
         print(Fore.LIGHTYELLOW_EX, "\n", "- " * 4, " [+] Follow me on Instagram @coding_memz ", "- " * 4)
