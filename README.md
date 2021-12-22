@@ -2,9 +2,9 @@
 Generate phone numbers of any country for creating whatsapp groups to improve productivity
 
 # Usage
-1. clone this respiratore ,
-2. select director,
-3. pip3 install -r requirements.txt ,
+1. clone this repository
+2. select directory
+3. pip3 install -r requirements.txt 
 4. python3 numbers_gen.py.
 
 
