@@ -1,4 +1,0 @@
-colorama
-phonenumbers
-fontstyle
-pyfiglet
