@@ -1,5 +1,6 @@
 # Phone_number_generator
-Generate phone numbers of any country for creating whatsapp groups to improve productivity, generate leads, and grab customers. This tool generates 100% valid phone numbers
+Generate phone numbers of any country for creating whatsapp groups to improve productivity, generate leads, and grab customers. This tool generates 100% valid phone numbers.
+If you want to add more functions like to check whether the number have WhatsApp or not, dm me on instagram @coding_memz
 
 # Screenshots
 ![Screenshot (58)](https://user-images.githubusercontent.com/93708296/233450573-7059994b-e826-4908-bfd8-d57470275d85.png)
