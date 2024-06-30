@@ -8,5 +8,5 @@ This tool generates numbers of specific country, you can mention the
 # Get
 
 To get this tool, dm me on instagram @coding_memz
-* Telegram @coding_memz
+* Telegram @cyberoxide
 * Instagram @coding_memz
